@@ -1,12 +1,33 @@
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 import { useState, useMemo } from "react";
 
-export default function Page() {
+function App() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
 
   // useMemo para calcular el tamaño del botón "Sí" basado en noCount.
   const yesButtonSize = useMemo(() => noCount * 20 + 16, [noCount]);
-
+  
+  const phrases = [
+    "No",
+    "Are you sure?",
+    "Really sure?",
+    "Think again!",
+    "Last chance!",
+    "Surely not?",
+    "You might regret this!",
+    "Give it another thought!",
+    "Are you absolutely certain?",
+    "This could be a mistake!",
+    "Have a heart!",
+    "Don't be so cold!",
+    "Change of heart?",
+    "Wouldn't you reconsider?",
+    "Is that your final answer?",
+    "You're breaking my heart ;(",
+  ];
   // Función para manejar clics en el botón "No".
   // Evita incrementar noCount más allá del número de frases disponibles.
   const handleNoClick = () => {
@@ -17,24 +38,6 @@ export default function Page() {
 
   // useMemo para obtener el texto del botón "No" y evitar cálculos innecesarios.
   const noButtonText = useMemo(() => {
-    const phrases = [
-      "No",
-      "Are you sure?",
-      "Really sure?",
-      "Think again!",
-      "Last chance!",
-      "Surely not?",
-      "You might regret this!",
-      "Give it another thought!",
-      "Are you absolutely certain?",
-      "This could be a mistake!",
-      "Have a heart!",
-      "Don't be so cold!",
-      "Change of heart?",
-      "Wouldn't you reconsider?",
-      "Is that your final answer?",
-      "You're breaking my heart ;(",
-    ];
     return phrases[Math.min(noCount, phrases.length - 1)];
   }, [noCount]);
 
@@ -69,3 +72,5 @@ export default function Page() {
     </div>
   );
 }
+
+export default App;
