@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sanValentin/static/css/main.9c3b639b.css",
+    "main.js": "/sanValentin/static/js/main.9aba0e06.js",
+    "static/js/592.b2c8fb5f.chunk.js": "/sanValentin/static/js/592.b2c8fb5f.chunk.js",
+    "index.html": "/sanValentin/index.html",
+    "main.9c3b639b.css.map": "/sanValentin/static/css/main.9c3b639b.css.map",
+    "main.9aba0e06.js.map": "/sanValentin/static/js/main.9aba0e06.js.map",
+    "592.b2c8fb5f.chunk.js.map": "/sanValentin/static/js/592.b2c8fb5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c3b639b.css",
+    "static/js/main.9aba0e06.js"
+  ]
+}
